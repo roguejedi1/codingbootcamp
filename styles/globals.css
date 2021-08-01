@@ -37,3 +37,7 @@ a {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+.shift {
+  padding-left: 20%;
+}

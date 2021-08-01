@@ -42,15 +42,17 @@ export const Material = styled.div`
 
 export const Thumbnail = styled(Image)`
   border-radius: 15px;
-`
+  `
 
 export const ThumbnailWrapper = styled.div`
   margin: 0 auto;
+  padding-left: 20%;
 `
 
 export const BtnWrapper = styled.div`
   margin: 0 auto;
   padding-left: 45%;
+  border: linear-gradient(90deg, rgba(28,22,145,1) 19%, rgba(192,0,255,1) 100%);
 `
 
 export const StartBtn = styled.button`
@@ -60,7 +62,6 @@ export const StartBtn = styled.button`
     color: #fff;
     font-size: 16px;
     outline: none;
-    border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
@@ -100,58 +101,58 @@ export default function Home(){
         <Lecture>
           <Heading>Mindset</Heading>
           <ThumbnailWrapper>
-            <a href="https://www.youtube.com/watch?v=azcrPFhaY9k" target="_blank"><Thumbnail src="/mindset.jpg" height={500} width={600} /></a>
+            <a href="https://www.youtube.com/watch?v=azcrPFhaY9k" target="_blank" rel="noreferrer"><Thumbnail src="/mindset.jpg" height={500} width={600} /></a>
           </ThumbnailWrapper>
         </Lecture>
         <Lecture>
           <Heading>Basics of the internet</Heading>
             <ThumbnailWrapper>
-            <a href="https://www.youtube.com/watch?v=7_LPdttKXPc&t=186s" target="_blank"><Thumbnail src="/Internet.png" height={500} width={600}/></a>
+            <a href="https://www.youtube.com/watch?v=7_LPdttKXPc&t=186s" target="_blank" rel="noreferrer"><Thumbnail src="/Internet.png" height={500} width={600}/></a>
             </ThumbnailWrapper>
         </Lecture>
         <Lecture>
           <Heading>HTML</Heading>
           <ThumbnailWrapper>
-            <a href='https://www.youtube.com/playlist?list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB' target="_blank"><Thumbnail src="/html-logo.png" height={500} width={600}/></a>
+            <a href='https://www.youtube.com/playlist?list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB' target="_blank" rel="noreferrer"><Thumbnail src="/html-logo.png" height={500} width={600}/></a>
           </ThumbnailWrapper>
         </Lecture>
         <Lecture>
           <Heading>CSS</Heading>
           <ThumbnailWrapper>
-            <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank"><Thumbnail src="/css-logo.jpg" height={500} width={600} /></a>
+            <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQeDH6xYhmO-db2mhoTSrT" target="_blank" rel="noreferrer"><Thumbnail src="/css-logo.jpg" height={500} width={600} /></a>
           </ThumbnailWrapper>
         </Lecture>
         <Lecture>
           <Heading>Bootstrap</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jE_cGvLLC60C_PeF_24pvv" target="_blank"><Thumbnail src="/bootstrap-logo.png" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jE_cGvLLC60C_PeF_24pvv" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/bootstrap-logo.png" height={500} width={600} className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>JavaScript</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET" target="_blank"><Thumbnail src="/js-logo.png" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9i9Ae2D9Ee1RvylH38dKuET" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/js-logo.png" height={500} width={600} className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>NodeJs</Heading>
-          <a href= "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU" target="_blank"><Thumbnail src="/nodejs-logo.png" height={500} width={600} /></a>
+          <a href= "https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/nodejs-logo.png" height={500} width={600} className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>ExpressJs</Heading>
-          <a href="https://www.youtube.com/playlist?list=PLp50dWW_m40Vruw9uKGNqySCNFLXK5YiO" target="_blank"><Thumbnail src="/expressjs-logo.png" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PLp50dWW_m40Vruw9uKGNqySCNFLXK5YiO" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/expressjs-logo.png" height={500} width={600} className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>MongoDB</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u" target="_blank"><Thumbnail src="/mongo-logo.jpg" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/mongo-logo.jpg" height={500} width={600} className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>Git</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR"><Thumbnail src="/GitHub-logo.png" height={500} width={600}/></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR" rel="noreferrer" className="shift" target="_blank"><Thumbnail src="/GitHub-logo.png" height={500} width={600}className="shift"/></a>
         </Lecture>
         <Lecture>
           <Heading>ReactJs</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d" target="_blank"><Thumbnail src="/react-logo.jpg" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/react-logo.jpg" height={500} width={600} className="shift" /></a>
         </Lecture>
         <Lecture>
           <Heading>NextJs</Heading>
-          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw" target="_blank"><Thumbnail src="/next-logo.png" height={500} width={600} /></a>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw" target="_blank" rel="noreferrer" className="shift"><Thumbnail src="/next-logo.png" height={500} width={600} className="shift"/></a>
         </Lecture>
       </Material>
     </>
