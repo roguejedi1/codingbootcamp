@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Image from "next/image"
 import {Icon, Button} from "semantic-ui-react"
 import {AiOutlineArrowDown} from "react-icons/ai"
+import { animateScroll as scroll, Link as LinkScroll } from "react-scroll";
+import { useState, useEffect } from "react";
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -46,16 +48,54 @@ export const ThumbnailWrapper = styled.div`
   margin: 0 auto;
 `
 
+export const BtnWrapper = styled.div`
+  margin: 0 auto;
+  padding-left: 45%;
+`
+
+export const StartBtn = styled.button`
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(0,3,154,1) 16%, rgba(0,224,255,1) 100%);
+    padding: 20px 22px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Encode', sans-serif;
+`;
+
 export default function Home(){
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  }
+
+  const toggleHome = () => {
+    scroll.scrollToTop()
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, []);
   return (
     <>
       <Navbar />
       <Container>
         <Hero className="gradient-text">Free Coding Bootcamp</Hero>
         <Sub>A complete step-by-step course to learn how to code without a CS background, from a failed CS student turned Engineer.</Sub>
-        <Button inverted color="blue">Get Started</Button>
+        <BtnWrapper>
+        <StartBtn onClick={() => scroll.scrollTo(700, scrollNav)} scrollNav={scrollNav} smooth={true} duration={500} spy={true} exact="true" offset={-80} to="main">Get Started</StartBtn>
+        </BtnWrapper>
       </Container>
-      <Material>
+      <Material id="main">
       <PSA>Click the image to access the relevant videos. Make sure to take notes of absolutely everything and implement the material whilst watching the lectures</PSA>
         <Lecture>
           <Heading>Mindset</Heading>
@@ -100,6 +140,10 @@ export default function Home(){
         <Lecture>
           <Heading>MongoDB</Heading>
           <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u" target="_blank"><Thumbnail src="/mongo-logo.jpg" height={500} width={600} /></a>
+        </Lecture>
+        <Lecture>
+          <Heading>Git</Heading>
+          <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR"><Thumbnail src="/GitHub-logo.png" height={500} width={600}/></a>
         </Lecture>
         <Lecture>
           <Heading>ReactJs</Heading>
